@@ -8,14 +8,14 @@ EasyFlick ist ein Netzwerk mit vielen **verschiedenen Möglichkeiten** in Richtu
 
 ```markdown
 
-# Minecraft
+Minecraft
 
 - Selbsterstelle Ressourcenpakete
 - Eigene Plugins
 - Texturepacks
 - und vieles mehr...
 
-# Discord
+Discord
 
 Wir haben natürlich auch einen Discord, deswegen kommt gerne auf den [EasyFlick Discord](https://discord.gg/dkpKAdvarP).
 Dort gibt es viele nette Menschen und eure Fragen werden hier am schnellsten beantwortet! Außerdem
@@ -24,9 +24,9 @@ Dort gibt es viele nette Menschen und eure Fragen werden hier am schnellsten bea
 - Zocken mit Freunden
 - Minigames wie TicTacToe
 - Musikbots
-- und natürlich einen **schnellen** Support!
+- und natürlich einen schnellen Support!
 
-# Homepage
+Homepage
 
 Auf der Homepage [https://easyflick.us.to](https://easyflick.us.to) gibt es die ganzen Downloads zu den besagten Projekten. 
 
