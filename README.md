@@ -16,10 +16,10 @@ EasyFlick ist ein Netzwerk mit vielen **verschiedenen Möglichkeiten** in Richtu
 - und vieles mehr...
 ```
 
-### Discord
+### [EasyFlick Discord](https://discord.gg/dkpKAdvarP).
 
 ```markdown
-Wir haben natürlich auch einen Discord, deswegen kommt gerne auf den [EasyFlick Discord](https://discord.gg/dkpKAdvarP).
+Wir haben natürlich auch einen Discord, deswegen kommt gerne auf den Discord. 
 Dort gibt es viele nette Menschen und eure Fragen werden hier am schnellsten beantwortet! Außerdem
 
 - einen eigenen Discord Bot
@@ -29,10 +29,10 @@ Dort gibt es viele nette Menschen und eure Fragen werden hier am schnellsten bea
 - und natürlich einen schnellen Support!
 ```
 
-### Homepage
+### EasyFlick Homepage [https://easyflick.us.to](https://easyflick.us.to)
 
 ```markdown
-Auf der Homepage [https://easyflick.us.to](https://easyflick.us.to) gibt es die ganzen Downloads zu den besagten Projekten. 
+Auf der Homepage gibt es die ganzen Downloads zu den besagten Projekten. 
 ```
 
 ## Support oder Kontakt
