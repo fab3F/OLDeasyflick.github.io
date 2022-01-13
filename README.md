@@ -17,7 +17,8 @@ EasyFlick ist ein Netzwerk mit vielen **verschiedenen Möglichkeiten** in Richtu
 
 # Discord
 
-Wir haben natürlich auch einen Discord, deswegen kommt gerne auf den [EasyFlick Discord](https://discord.gg/dkpKAdvarP). Dort gibt es viele nette Menschen und eure Fragen werden hier am schnellsten beantwortet! Außerdem
+Wir haben natürlich auch einen Discord, deswegen kommt gerne auf den [EasyFlick Discord](https://discord.gg/dkpKAdvarP).
+Dort gibt es viele nette Menschen und eure Fragen werden hier am schnellsten beantwortet! Außerdem
 
 - einen eigenen Discord Bot
 - Zocken mit Freunden
