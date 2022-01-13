@@ -6,15 +6,15 @@ Hier bei EasyFlick und auf der [EasyFlick Homepage](https://easyflick.us.to) fin
 
 EasyFlick ist ein Netzwerk mit vielen **verschiedenen Möglichkeiten** in Richtung Gaming, Coding oder auch mal Dokumentationen mit Tipps und Tricks wie
 
+
+# Minecraft
+
 ```markdown
-
-Minecraft
-
 - Selbsterstelle Ressourcenpakete
 - Eigene Plugins
 - Texturepacks
 - und vieles mehr...
-
+```
 Discord
 
 Wir haben natürlich auch einen Discord, deswegen kommt gerne auf den [EasyFlick Discord](https://discord.gg/dkpKAdvarP).
