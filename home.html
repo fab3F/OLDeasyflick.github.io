@@ -16,7 +16,85 @@
     <style type="text/css" class="silex-style">@import url(https://fonts.googleapis.com/css?family=Work+Sans:300,600);:root {--background: rgba(38, 38, 56, 0.85);}*, *::before, *::after {box-sizing: border-box;}body {margin: 0; background: #222; font-family: 'Work Sans', sans-serif; font-weight: 400;}.content {height: 200vh; background-image: url(//unsplash.it/1000/1000); background-color: #333; background-blend-mode: multiply; background-size: cover; display: grid; place-items: center;}header {background: var(--background); text-align: center; position: fixed; z-index: 999; width: 100%;}.nav-toggle {position: absolute !important; top: -9999px !important; left: -9999px !important;}.nav-toggle:focus ~ .nav-toggle-label {outline: 3px solid rgba(lightblue, .75);}.nav-toggle-label {position: absolute; top: 0; left: 0; margin-left: 1em; height: 100%; display: flex; align-items: center;}.nav-toggle-label span,
 .nav-toggle-label span::before,
 .nav-toggle-label span::after {display: block; background: white; height: 2px; width: 2em; border-radius: 2px; position: relative;}.nav-toggle-label span::before,
-.nav-toggle-label span::after {content: ''; position: absolute;}.nav-toggle-label span::before {bottom: 7px;}.nav-toggle-label span::after {top: 7px;}nav {position: absolute; text-align: left; top: 100%; left: 0; background: var(--background); width: 100%; transform: scale(1, 0); transform-origin: top; transition: transform 400ms ease-in-out;}nav ul {margin: 0; padding: 0; list-style: none;}nav li {margin-bottom: 1em; margin-left: 1em;}nav a {color: white; text-decoration: none; font-size: 1.2rem; text-transform: uppercase; opacity: 0; transition: opacity 150ms ease-in-out;}nav a:hover {color: #000;}.nav-toggle:checked ~ nav {transform: scale(1,1);}.nav-toggle:checked ~ nav a {opacity: 1; transition: opacity 250ms ease-in-out 250ms;}@media screen and (min-width: 800px) {.nav-toggle-label {display: none;}header {display: grid; grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;}.logo {grid-column: 2 / 3;}nav {position: relative; text-align: left; transition: none; transform: scale(1,1); background: none; top: initial; left: initial; grid-column: 3 / 4; display: flex; justify-content: flex-end; align-items: center;}nav ul {display: flex;}nav li {margin-left: 3em; margin-bottom: 0;}nav a {opacity: 1; position: relative;}nav a::before {content: ''; display: block; height: 5px; background: black; position: absolute; top: -.75em; left: 0; right: 0; transform: scale(0, 1); transition: transform ease-in-out 250ms;}nav a:hover::before {transform: scale(1,1);}}.site-footer {background-color: #26272b; padding: 45px 0 20px; font-size: 15px; line-height: 24px; color: #737373;}.site-footer hr {border-top-color: #bbb; opacity: 0.5;}.site-footer hr.small {margin: 20px 0;}.site-footer h6 {color: #fff; font-size: 16px; text-transform: uppercase; margin-top: 5px; letter-spacing: 2px;}.site-footer a {color: #737373;}.site-footer a:hover {color: #3366cc; text-decoration: none;}.footer-links {padding-left: 0; list-style: none;}.footer-links li {display: block;}.footer-links a {color: #737373;}.footer-links a:active,.footer-links a:focus,.footer-links a:hover {color: #3366cc; text-decoration: none;}.footer-links.inline li {display: inline-block;}.site-footer .social-icons {text-align: right;}.site-footer .social-icons a {width: 40px; height: 40px; line-height: 40px; margin-left: 6px; margin-right: 0; border-radius: 100%; background-color: #33353d;}.copyright-text {margin: 0;}@media (max-width:991px) {.site-footer [class^=col-] {margin-bottom: 30px;}}@media (max-width:767px) {.site-footer {padding-bottom: 0;}.site-footer .copyright-text,.site-footer .social-icons {text-align: center;}}.social-icons {padding-left: 0; margin-bottom: 0; list-style: none;}.social-icons li {display: inline-block; margin-bottom: 4px;}.social-icons li.title {margin-right: 15px; text-transform: uppercase; color: #96a2b2; font-weight: 700; font-size: 13px;}.social-icons a {background-color: #eceeef; color: #818a91; font-size: 16px; display: inline-block; line-height: 44px; width: 44px; height: 44px; text-align: center; margin-right: 8px; border-radius: 100%; -webkit-transition: all .2s linear; -o-transition: all .2s linear; transition: all .2s linear;}.social-icons a:active,.social-icons a:focus,.social-icons a:hover {color: #fff; background-color: #29aafe;}.social-icons.size-sm a {line-height: 34px; height: 34px; width: 34px; font-size: 14px;}.social-icons a.facebook:hover {background-color: #3b5998;}.social-icons a.twitter:hover {background-color: #00aced;}.social-icons a.linkedin:hover {background-color: #007bb6;}.social-icons a.dribbble:hover {background-color: #ea4c89;}@media (max-width:767px) {.social-icons li.title {display: block; margin-right: 0; font-weight: 600;}}article {display: block;}</style>
+.nav-toggle-label span::after {content: ''; position: absolute;}.nav-toggle-label span::before {bottom: 7px;}.nav-toggle-label span::after {top: 7px;}nav {position: absolute; text-align: left; top: 100%; left: 0; background: var(--background); width: 100%; transform: scale(1, 0); transform-origin: top; transition: transform 400ms ease-in-out;}nav ul {margin: 0; padding: 0; list-style: none;}nav li {margin-bottom: 1em; margin-left: 1em;}nav a {color: white; text-decoration: none; font-size: 1.2rem; text-transform: uppercase; opacity: 0; transition: opacity 150ms ease-in-out;}nav a:hover {color: #000;}.nav-toggle:checked ~ nav {transform: scale(1,1);}.nav-toggle:checked ~ nav a {opacity: 1; transition: opacity 250ms ease-in-out 250ms;}@media screen and (min-width: 800px) {.nav-toggle-label {display: none;}header {display: grid; grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;}.logo {grid-column: 2 / 3;}nav {position: relative; text-align: left; transition: none; transform: scale(1,1); background: none; top: initial; left: initial; grid-column: 3 / 4; display: flex; justify-content: flex-end; align-items: center;}nav ul {display: flex;}nav li {margin-left: 3em; margin-bottom: 0;}nav a {opacity: 1; position: relative;}nav a::before {content: ''; display: block; height: 5px; background: black; position: absolute; top: -.75em; left: 0; right: 0; transform: scale(0, 1); transition: transform ease-in-out 250ms;}nav a:hover::before {transform: scale(1,1);}}body {margin-top: 20px;}.footer_area {position: relative; z-index: 1; overflow: hidden; webkit-box-shadow: 0 8px 48px 8px rgba(47, 91, 234, 0.175); box-shadow: 0 8px 48px 8px rgba(47, 91, 234, 0.175); padding: 60px;}.footer_area .row {margin-left: -25px; margin-right: -25px;}.footer_area .row .col,
+.footer_area .row .col-1,
+.footer_area .row .col-10,
+.footer_area .row .col-11,
+.footer_area .row .col-12,
+.footer_area .row .col-2,
+.footer_area .row .col-3,
+.footer_area .row .col-4,
+.footer_area .row .col-5,
+.footer_area .row .col-6,
+.footer_area .row .col-7,
+.footer_area .row .col-8,
+.footer_area .row .col-9,
+.footer_area .row .col-auto,
+.footer_area .row .col-lg,
+.footer_area .row .col-lg-1,
+.footer_area .row .col-lg-10,
+.footer_area .row .col-lg-11,
+.footer_area .row .col-lg-12,
+.footer_area .row .col-lg-2,
+.footer_area .row .col-lg-3,
+.footer_area .row .col-lg-4,
+.footer_area .row .col-lg-5,
+.footer_area .row .col-lg-6,
+.footer_area .row .col-lg-7,
+.footer_area .row .col-lg-8,
+.footer_area .row .col-lg-9,
+.footer_area .row .col-lg-auto,
+.footer_area .row .col-md,
+.footer_area .row .col-md-1,
+.footer_area .row .col-md-10,
+.footer_area .row .col-md-11,
+.footer_area .row .col-md-12,
+.footer_area .row .col-md-2,
+.footer_area .row .col-md-3,
+.footer_area .row .col-md-4,
+.footer_area .row .col-md-5,
+.footer_area .row .col-md-6,
+.footer_area .row .col-md-7,
+.footer_area .row .col-md-8,
+.footer_area .row .col-md-9,
+.footer_area .row .col-md-auto,
+.footer_area .row .col-sm,
+.footer_area .row .col-sm-1,
+.footer_area .row .col-sm-10,
+.footer_area .row .col-sm-11,
+.footer_area .row .col-sm-12,
+.footer_area .row .col-sm-2,
+.footer_area .row .col-sm-3,
+.footer_area .row .col-sm-4,
+.footer_area .row .col-sm-5,
+.footer_area .row .col-sm-6,
+.footer_area .row .col-sm-7,
+.footer_area .row .col-sm-8,
+.footer_area .row .col-sm-9,
+.footer_area .row .col-sm-auto,
+.footer_area .row .col-xl,
+.footer_area .row .col-xl-1,
+.footer_area .row .col-xl-10,
+.footer_area .row .col-xl-11,
+.footer_area .row .col-xl-12,
+.footer_area .row .col-xl-2,
+.footer_area .row .col-xl-3,
+.footer_area .row .col-xl-4,
+.footer_area .row .col-xl-5,
+.footer_area .row .col-xl-6,
+.footer_area .row .col-xl-7,
+.footer_area .row .col-xl-8,
+.footer_area .row .col-xl-9,
+.footer_area .row .col-xl-auto {padding-right: 25px; padding-left: 25px;}.single-footer-widget {position: relative; z-index: 1;}.single-footer-widget .copywrite-text a {color: #747794; font-size: 1rem;}.single-footer-widget .copywrite-text a:hover,
+.single-footer-widget .copywrite-text a:focus {color: #3f43fd;}.single-footer-widget .widget-title {margin-bottom: 1.5rem;}.single-footer-widget .footer_menu li a {color: #747794; margin-bottom: 1rem; display: block; font-size: 1rem;}.single-footer-widget .footer_menu li a:hover,
+.single-footer-widget .footer_menu li a:focus {color: #3f43fd;}.single-footer-widget .footer_menu li:last-child a {margin-bottom: 0;}.footer_social_area {position: relative; z-index: 1;}.footer_social_area a {border-radius: 50%; height: 40px; text-align: center; width: 40px; display: inline-block; background-color: #f5f5ff; line-height: 40px; -webkit-box-shadow: none; box-shadow: none; margin-right: 10px;}.footer_social_area a i {line-height: 36px;}.footer_social_area a:hover,
+.footer_social_area a:focus {color: #ffffff;}@-webkit-keyframes bi-cycle { 
+  0% {left: 0;} 
+  100% {left: 100%;} 
+}@keyframes bi-cycle { 
+  0% {left: 0;} 
+  100% {left: 100%;} 
+}ol li, ul li {list-style: none;}ol, ul {margin: 0; padding: 0;}article {display: block;}</style>
     <script type="text/javascript" class="silex-script"></script>
     <style class="silex-inline-styles" type="text/css">.body-initial {background-color: rgba(255,255,255,1); position: static;}.silex-id-1474394621033-3 {position: static; margin-top: -1px;}.silex-id-1474394621032-2 {background-color: transparent; min-height: 81px; position: relative; margin-left: auto; margin-right: auto;}.silex-id-1478366450713-3 {background-color: transparent; position: static; margin-top: -1px;}.silex-id-1478366450713-2 {background-color: transparent; min-height: 374px; position: relative; margin-left: auto; margin-right: auto;}.silex-id-1642199840312-1 {width: 1000px; min-height: 364px; position: absolute; top: 0px; left: 320px;}.silex-id-1642262235050-0 {position: static;}.silex-id-1642262235050-1 {min-height: 100px; background-color: rgb(255, 255, 255); position: relative; margin-left: auto; margin-right: auto;}.silex-id-1642262805265-2 {width: 1920px; min-height: 713.25px; background-color: rgb(255, 255, 255); position: absolute; top: 0px; left: 0px;}@media only screen and (max-width: 480px) {}</style>
     <title>EasyFlick</title>
@@ -80,56 +158,74 @@
 
             
         <div data-silex-type="text-element" class="editable-style text-element silex-id-1642199840312-1 page-home paged-element" data-silex-id="silex-id-1642199840312-1" style="" href="null"><div class="silex-element-content normal"><h1><u>﻿EasyFlick Homepage</u><br></h1></div></div></div>
-    </section><section data-silex-type="container-element" class="editable-style section-element silex-id-1642262235050-0 page-home paged-element" data-silex-id="silex-id-1642262235050-0"><div data-silex-type="container-element" class="editable-style container-element silex-id-1642262235050-1 silex-element-content prevent-draggable website-width" data-silex-id="silex-id-1642262235050-1"><div data-silex-type="html-element" class="editable-style html-element silex-id-1642262805265-2" data-silex-id="silex-id-1642262805265-2" style=""><div class="silex-element-content"><!-- Site footer -->
-    <footer class="site-footer">
+    </section><section data-silex-type="container-element" class="editable-style section-element silex-id-1642262235050-0 page-home paged-element" data-silex-id="silex-id-1642262235050-0"><div data-silex-type="container-element" class="editable-style container-element silex-id-1642262235050-1 silex-element-content prevent-draggable website-width" data-silex-id="silex-id-1642262235050-1"><div data-silex-type="html-element" class="editable-style html-element silex-id-1642262805265-2" data-silex-id="silex-id-1642262805265-2" style=""><div class="silex-element-content"><link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+<footer class="footer_area section_padding_130_0">
       <div class="container">
         <div class="row">
-          <div class="col-sm-12 col-md-6">
-            <h6>About</h6>
-            <p class="text-justify">Scanfcode.com <i>CODE WANTS TO BE SIMPLE </i> is an initiative  to help the upcoming programmers with the code. Scanfcode focuses on providing the most efficient code or snippets as the code wants to be simple. We will help programmers build up concepts in different programming languages that include C, C++, Java, HTML, CSS, Bootstrap, JavaScript, PHP, Android, SQL and Algorithm.</p>
+          <!-- Single Widget-->
+          <div class="col-12 col-sm-6 col-lg-4">
+            <div class="single-footer-widget section_padding_0_130">
+              <!-- Footer Logo-->
+              <div class="footer-logo mb-3"></div>
+              <p>Appland is completely creative, lightweight, clean app landing page.</p>
+              <!-- Copywrite Text-->
+              <div class="copywrite-text mb-5">
+                <p class="mb-0">Made with <i class="lni-heart mr-1"></i>by<a class="ml-1" href="https://wrapbootstrap.com/user/DesigningWorld">Designing World</a></p>
+              </div>
+              <!-- Footer Social Area-->
+              <div class="footer_social_area"><a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Facebook"><i class="fa fa-facebook"></i></a><a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Pinterest"><i class="fa fa-pinterest"></i></a><a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Skype"><i class="fa fa-skype"></i></a><a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Twitter"><i class="fa fa-twitter"></i></a></div>
+            </div>
           </div>
-
-          <div class="col-xs-6 col-md-3">
-            <h6>Categories</h6>
-            <ul class="footer-links">
-              <li><a href="http://scanfcode.com/category/c-language/">C</a></li>
-              <li><a href="http://scanfcode.com/category/front-end-development/">UI Design</a></li>
-              <li><a href="http://scanfcode.com/category/back-end-development/">PHP</a></li>
-              <li><a href="http://scanfcode.com/category/java-programming-language/">Java</a></li>
-              <li><a href="http://scanfcode.com/category/android/">Android</a></li>
-              <li><a href="http://scanfcode.com/category/templates/">Templates</a></li>
-            </ul>
+          <!-- Single Widget-->
+          <div class="col-12 col-sm-6 col-lg">
+            <div class="single-footer-widget section_padding_0_130">
+              <!-- Widget Title-->
+              <h5 class="widget-title">About</h5>
+              <!-- Footer Menu-->
+              <div class="footer_menu">
+                <ul>
+                  <li><a href="#">About Us</a></li>
+                  <li><a href="#">Corporate Sale</a></li>
+                  <li><a href="#">Terms &amp; Policy</a></li>
+                  <li><a href="#">Community</a></li>
+                </ul>
+              </div>
+            </div>
           </div>
-
-          <div class="col-xs-6 col-md-3">
-            <h6>Quick Links</h6>
-            <ul class="footer-links">
-              <li><a href="http://scanfcode.com/about/">About Us</a></li>
-              <li><a href="http://scanfcode.com/contact/">Contact Us</a></li>
-              <li><a href="http://scanfcode.com/contribute-at-scanfcode/">Contribute</a></li>
-              <li><a href="http://scanfcode.com/privacy-policy/">Privacy Policy</a></li>
-              <li><a href="http://scanfcode.com/sitemap/">Sitemap</a></li>
-            </ul>
+          <!-- Single Widget-->
+          <div class="col-12 col-sm-6 col-lg">
+            <div class="single-footer-widget section_padding_0_130">
+              <!-- Widget Title-->
+              <h5 class="widget-title">Support</h5>
+              <!-- Footer Menu-->
+              <div class="footer_menu">
+                <ul>
+                  <li><a href="#">Help</a></li>
+                  <li><a href="#">Support</a></li>
+                  <li><a href="#">Privacy Policy</a></li>
+                  <li><a href="#">Term &amp; Conditions</a></li>
+                  <li><a href="#">Help &amp; Support</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- Single Widget-->
+          <div class="col-12 col-sm-6 col-lg">
+            <div class="single-footer-widget section_padding_0_130">
+              <!-- Widget Title-->
+              <h5 class="widget-title">Contact</h5>
+              <!-- Footer Menu-->
+              <div class="footer_menu">
+                <ul>
+                  <li><a href="#">Call Centre</a></li>
+                  <li><a href="#">Email Us</a></li>
+                  <li><a href="#">Term &amp; Conditions</a></li>
+                  <li><a href="#">Help Center</a></li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
-        <hr>
       </div>
-      <div class="container">
-        <div class="row">
-          <div class="col-md-8 col-sm-6 col-xs-12">
-            <p class="copyright-text">Copyright © 2017 All Rights Reserved by 
-         <a href="#">Scanfcode</a>.
-            </p>
-          </div>
-
-          <div class="col-md-4 col-sm-6 col-xs-12">
-            <ul class="social-icons">
-              <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
-              <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
-              <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
-              <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>   
-            </ul>
-          </div>
-        </div>
-      </div>
-</footer></div></div></div></section></body></html>
+    </footer></div></div></div></section></body></html>
