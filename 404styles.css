@@ -1,326 +1,132 @@
-@import "compass/reset"
-@import "compass/css3"
-@import url('https://fonts.googleapis.com/css?family=Poppins')
-
-$count: 100
-$shadow: #ff9c61
-$light: #fedbae
-$gradient1: #2a1f6f
-$gradient2: #ae3082
-$squareSize: 150px
-
-@keyframes shining
-	0%
-		opacity: 1
-	100%
-		opacity: 0.2
-
-body
-	background-color: #482472
-	font-family: Poppins
-
-//---------------------------
-// GENERAL SCENERY
-//---------------------------
-.scenery
-	position: absolute
-	top: 50%
-	left: 50%
-	width: 1000px
-	height: 618px
-	display: flex
-	flex-direction: column
-	align-items: center
-	justify-content: center
-	transform: translate(-50%, -50%)
-	overflow: hidden
-	border-radius: 5px
-	color: #fff
-	+background-image(linear-gradient($gradient1, $gradient2))
-	+box-shadow(rgba(0,0,0,0.8) 0px 0px 100px)
-
-//---------------------------
-// STARS
-//---------------------------
-.star
-	position: absolute
-	z-index: 1
-	background-color: #fff
-	animation-name: shining
-	animation-timing-function: ease
-	animation-direction: alternate
-	animation-iteration-count: infinite
-	+box-shadow(#fff 0px 0px 5px)
-	+border-radius(200px)
-	
-@for $i from 1 to $count
-	$size: random(3)+0px
-	.star:nth-child(#{$i})
-		width: $size
-		height: $size
-		bottom: random(618)+0px
-		left: random(1000)+0px
-		animation-duration: random(4) / random(3) + 0s
-
-//---------------------------
-// TEXT
-//---------------------------
-.title
-	position: relative
-	z-index: 50
-	h1
-		font-size: 15rem
-		font-weight: bold
-		span
-			vertical-align: middle
-			margin: 0 30px
-
-.message
-	margin-top: 50px
-	h2
-		font-size: 1.8rem
-
-.action
-	margin-top: 30px
-	button
-		padding: 10px 20px
-		font-family: Poppins
-		font-size: 1.2rem
-		color: #fff
-		border: 2px solid $shadow
-		background-color: $shadow
-		border-radius: 50px
-		+transition(all .2s ease)
-		box-shadow: 0px 0px 15px $shadow
-		&:hover
-			cursor: pointer
-			background-color: transparent
-
-//---------------------------
-// FIGURE
-//---------------------------		
-.square
-	width: $squareSize
-	height: $squareSize
-	display: inline-block
-	position: relative
-	vertical-align: middle
-	left: -30px
-	+transform(scale(1.1) rotate(45deg))
-	> *
-		position: absolute
-	.light
-		box-shadow: 0px 0px 10px $light
-		background-color: $light
-	.light1, .light3
-		width: $squareSize / 10 
-		height: $squareSize - $squareSize / 10
-		+transform(skew(0deg, 45deg))
-	.light2, .light4
-		width: $squareSize - $squareSize / 5
-		height: $squareSize / 10 
-		+transform(skew(45deg))
-	.light1
-		z-index: 10
-		top: $squareSize / 20 - 2px
-		left: $squareSize / 10
-	.light3
-		z-index: 2
-		top: $squareSize / 20
-		right: $squareSize / 10
-	.light2
-		top: 0
-		left: $squareSize / 10 + ($squareSize / 10)/2
-	.light4
-		bottom: 0
-		right: $squareSize / 10 + ($squareSize / 10)/2
-
-	.shadow
-		background-color: $shadow
-		box-shadow: 0px 0px 10px $shadow
-	.shadow1
-		bottom: $squareSize / 20
-		right: 0
-		width: $squareSize / 10 
-		height: $squareSize - $squareSize / 5
-		+transform(skew(0deg, -45deg))
-	.shadow2
-		z-index: 3
-		top: $squareSize / 10
-		left: $squareSize / 10 + ($squareSize / 10)/2
-		width: $squareSize - $squareSize / 5
-		height: $squareSize / 10
-		+transform(skew(-45deg))
-	
-	.stairs1, .stairs2, .stairs3, .stairs4
-		li
-			position: relative
-			width: $squareSize/20
-			height: $squareSize/20
-			background-color: $light
-			box-shadow: 0px 0px 10px $light
-			+transform(rotate(45deg))
-	.stairs1, .stairs2
-		li
-			&::before
-				content: ''
-				position: absolute
-				left: 0
-				width: $squareSize/20
-				height: 13px
-				+background-image(linear-gradient(left, $light, $shadow))
-				box-shadow: 0px 0px 10px $light
-		
-	.stairs1
-		top: 1px
-		left: 11px
-		width: 0px
-		height: $squareSize
-		li
-			margin-bottom: 3px
-			&::before
-				top: 100%
-				
-	.stairs2
-		z-index: 10
-		bottom: 19px
-		left: 3px
-		width: $squareSize
-		height: 0px
-		display: flex
-		li
-			margin-right: 3.5px
-			&:last-child
-				&::before
-					background: $light
-			&::before
-				bottom: 100%
-	
-	.stairs3
-		bottom: -32px
-		right: 34px
-		width: 0px
-		height: $squareSize
-		z-index: 10
-		li
-			margin-bottom: 3.5px
-
-	.stairs4
-		top: -4px
-		left: 16px
-		width: $squareSize
-		height: 0px
-		display: flex
-		li
-			margin-right: 3.5px
-
-//---------------------------
-// PLANETS
-//---------------------------			
-.planet
-	position: absolute
-	z-index: 10
-	width: 90px
-	height: 90px
-	border-radius: 50%
-	box-sizing: border-box
-	&::before, &::after
-		content: ''
-		position: absolute
-		z-index: 1
-		top: 50%
-		left: 50%
-		border-radius: 50%
-		transform: translate(-50%, -50%)
-	&::before
-		width: 70px
-		height: 70px
-	&::after
-		width: 60px
-		height: 60px
-.planet1
-	box-shadow: 0px 0px 30px #a3358c
-	bottom: 260px
-	left: 50px
-	border: 5px solid #a3358c
-	background-color: #cf3684
-	&::before
-		background-color: #fd8f5d
-	&::after
-		background-color: #ffdf70
-
-.planet2
-	box-shadow: 0px 0px 30px #1383df
-	+transform(scale(0.8))
-	bottom: 40px
-	right: 80px	
-	border: 5px solid #1383df
-	background-color: #08abf3
-	&::before
-		background-color: #11c1f1
-	&::after
-		background-color: #22e5f1
-
-.planet3
-	box-shadow: 0px 0px 30px #7a7afe
-	+transform(scale(0.6))
-	top: 20px
-	right: 30px	
-	border: 5px solid #7a7afe
-	background-color: #9a82ff
-	&::before
-		background-color: #b588ff
-	&::after
-		background-color: #d491ff
-
-//---------------------------
-// GIRL
-//---------------------------
-.girl
-	position: absolute
-	z-index: 99
-	width: 12px
-	height: 40px
-	top: 130px
-	left: 460px
-	.head
-		position: relative
-		z-index: 10
-		width: 10px
-		height: 10px
-		box-sizing: border-box
-		background-color: #fff
-		border-left: 3px solid #000
-		border-radius: 5px
-		+transform(rotate(-20deg))
-		&::before
-			content: ''
-			position: absolute
-			left: -16px
-			top: 0px
-			width: 0px
-			height: 0px
-			display: block
-			border-right: 15px solid #fff
-			border-top: 5px solid transparent
-			border-bottom: 4px solid transparent
-	.body
-		position: absolute
-		top: 7px
-		left: -2px
-		width: 0px
-		height: 0px
-		box-sizing: border-box
-		border-bottom: 20px solid #fff
-		border-left: 8px solid transparent
-		border-right: 8px solid transparent
-		border-radius: 7px
-
-	.legs
-		position: absolute
-		bottom: 5px
-		left: 3px
-		width: 3px
-		height: 10px
-		border-left: 2px solid #fff
-		border-right: 2px solid #fff
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&family=Roboto:wght@100;300&display=swap");
+:root {
+  --button: #b3b3b3;
+  --button-color: #0a0a0a;
+  --shadow: #000;
+  --bg: #737373;
+  --header: #7a7a7a;
+  --color: #fafafa;
+  --lit-header: #e6e6e6;
+  --speed: 2s;
+}
+* {
+  box-sizing: border-box;
+  transform-style: preserve-3d;
+}
+@property --swing-x {
+  initial-value: 0;
+  inherits: false;
+  syntax: '<integer>';
+}
+@property --swing-y {
+  initial-value: 0;
+  inherits: false;
+  syntax: '<integer>';
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  font-family: 'Roboto', sans-serif;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg);
+  color: var(--color);
+  perspective: 1200px;
+}
+a {
+  text-transform: uppercase;
+  text-decoration: none;
+  background: var(--button);
+  color: var(--button-color);
+  padding: 1rem 4rem;
+  border-radius: 4rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.05rem;
+}
+p {
+  font-weight: 100;
+}
+h1 {
+  -webkit-animation: swing var(--speed) infinite alternate ease-in-out;
+          animation: swing var(--speed) infinite alternate ease-in-out;
+  font-size: clamp(5rem, 40vmin, 20rem);
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  margin-bottom: 1rem;
+  letter-spacing: 1rem;
+  transform: translate3d(0, 0, 0vmin);
+  --x: calc(50% + (var(--swing-x) * 0.5) * 1%);
+  background: radial-gradient(var(--lit-header), var(--header) 45%) var(--x) 100%/200% 200%;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+h1:after {
+  -webkit-animation: swing var(--speed) infinite alternate ease-in-out;
+          animation: swing var(--speed) infinite alternate ease-in-out;
+  content: "404";
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: var(--shadow);
+  filter: blur(1.5vmin);
+  transform: scale(1.05) translate3d(0, 12%, -10vmin) translate(calc((var(--swing-x, 0) * 0.05) * 1%), calc((var(--swing-y) * 0.05) * 1%));
+}
+.cloak {
+  animation: swing var(--speed) infinite alternate-reverse ease-in-out;
+  height: 100%;
+  width: 100%;
+  transform-origin: 50% 30%;
+  transform: rotate(calc(var(--swing-x) * -0.25deg));
+  background: radial-gradient(40% 40% at 50% 42%, transparent, #000 35%);
+}
+.cloak__wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  overflow: hidden;
+}
+.cloak__container {
+  height: 250vmax;
+  width: 250vmax;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.info {
+  text-align: center;
+  line-height: 1.5;
+  max-width: clamp(16rem, 90vmin, 25rem);
+}
+.info > p {
+  margin-bottom: 3rem;
+}
+@-webkit-keyframes swing {
+  0% {
+    --swing-x: -100;
+    --swing-y: -100;
+  }
+  50% {
+    --swing-y: 0;
+  }
+  100% {
+    --swing-y: -100;
+    --swing-x: 100;
+  }
+}
+@keyframes swing {
+  0% {
+    --swing-x: -100;
+    --swing-y: -100;
+  }
+  50% {
+    --swing-y: 0;
+  }
+  100% {
+    --swing-y: -100;
+    --swing-x: 100;
+  }
+}
