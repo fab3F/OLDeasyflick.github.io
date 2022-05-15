@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@600;900&display=swap" rel="stylesheet">
+  <script src="404.js" crossorigin="anonymous"></script>
   <style>
     body {
       background-color: #95c2de;
@@ -61,70 +63,10 @@
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1 class="first-four">4</h1>
-    <div class="cog-wheel1">
-        <div class="cog1">
-          <div class="top"></div>
-          <div class="down"></div>
-          <div class="left-top"></div>
-          <div class="left-down"></div>
-          <div class="right-top"></div>
-          <div class="right-down"></div>
-          <div class="left"></div>
-          <div class="right"></div>
-      </div>
-    </div>
-
-    <div class="cog-wheel2"> 
-      <div class="cog2">
-          <div class="top"></div>
-          <div class="down"></div>
-          <div class="left-top"></div>
-          <div class="left-down"></div>
-          <div class="right-top"></div>
-          <div class="right-down"></div>
-          <div class="left"></div>
-          <div class="right"></div>
-      </div>
-    </div>
-   <h1 class="second-four">4</h1>
-    <p class="wrong-para">Ups! Diese Seite wurde nicht gefunden...</p>
+  <div class="mainbox">
+    <div class="err">4</div>
+    <i class="far fa-question-circle fa-spin"></i>
+    <div class="err2">4</div>
+    <div class="msg">Maybe this page moved? Got deleted? Is hiding out in quarantine? Never existed in the first place?<p>Let's go <a href="#">home</a> and try from there.</p></div>
   </div>
-  <script>
-    let t1 = gsap.timeline();
-    let t2 = gsap.timeline();
-    let t3 = gsap.timeline();
-
-    t1.to(".cog1",
-    {
-      transformOrigin:"50% 50%",
-      rotation:"+=360",
-      repeat:-1,
-      ease:Linear.easeNone,
-      duration:8
-    });
-
-    t2.to(".cog2",
-    {
-      transformOrigin:"50% 50%",
-      rotation:"-=360",
-      repeat:-1,
-      ease:Linear.easeNone,
-      duration:8
-    });
-
-    t3.fromTo(".wrong-para",
-    {
-      opacity:0
-    },
-    {
-      opacity:1,
-      duration:1,
-      stagger:{
-        repeat:-1,
-        yoyo:true
-      }
-    });
-  </script>
 </body>
